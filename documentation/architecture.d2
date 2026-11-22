@@ -1,0 +1,31 @@
+direction: down
+
+user: "User\nPDF · image · TXT"
+frontend: "React + Vite\nWorkspace page + reusable components"
+api: "FastAPI\nbackend/main.py\nInvoice routes"
+document: "Document processor\n15 MB/type/signature checks"
+ocr: "OCR service\nPyMuPDF + RapidOCR\npage-level fallback"
+prompt: "Prompt loader\nP1–P6 text files"
+llm: "LLM service\nGemini first"
+ollama: "Ollama local\nfallback in auto mode"
+schema: "Pydantic schema\n+ validator warnings"
+result: "Review dashboard\nJSON · warnings · source text"
+data: "Paired synthetic set\n50 invoice texts + labels"
+experiment: "Controlled experiments\nP1–P6 on one provider"
+evaluation: "Metrics + plots\nCSV · JSON · PNG"
+
+user -> frontend -> api -> document -> ocr -> prompt -> llm
+llm -> ollama: "If Gemini unavailable"
+llm -> schema -> result
+ollama -> schema
+data -> experiment -> evaluation
+
+style.fill: "#f4f7f5"
+style.stroke: "#1f5553"
+user.style.fill: "#e7f0ee"
+frontend.style.fill: "#e7f0ee"
+api.style.fill: "#dcebea"
+llm.style.fill: "#f5e8dc"
+ollama.style.fill: "#f5e8dc"
+schema.style.fill: "#e9e6f5"
+evaluation.style.fill: "#e9e6f5"

@@ -1,0 +1,31 @@
+direction: down
+
+upload: "1 · Upload file"
+check: "2 · Validate size, suffix, signature"
+process: "3 · Extract text\nPyMuPDF, UTF-8, or RapidOCR"
+select: "4 · Select P1–P6"
+gemini: "5 · Request Gemini first"
+cloud_ok: "Gemini response valid?"
+ollama: "6 · Call local Ollama\nwhen Gemini fails"
+ollama_ok: "Ollama response valid?"
+validate: "7 · Pydantic schema validation"
+warn: "8 · Add review warnings\nDo not change printed values"
+show: "9 · Show provider, model, fields, JSON, source"
+error: "Return readable extraction error"
+
+upload -> check -> process -> select -> gemini -> cloud_ok
+cloud_ok -> validate: "Yes"
+cloud_ok -> ollama: "No / unavailable"
+ollama -> ollama_ok
+ollama_ok -> validate: "Yes"
+ollama_ok -> error: "No"
+validate -> warn -> show
+
+style.fill: "#f4f7f5"
+style.stroke: "#1f5553"
+gemini.style.fill: "#f5e8dc"
+ollama.style.fill: "#f5e8dc"
+validate.style.fill: "#e9e6f5"
+warn.style.fill: "#e9e6f5"
+show.style.fill: "#e7f0ee"
+error.style.fill: "#f6e3df"
