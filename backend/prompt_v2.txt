@@ -1,9 +1,0 @@
----
-{
-  "id": "p2",
-  "name": "P2 · Role-based",
-  "technique": "Role-based",
-  "description": "Tests whether an expert role and responsibility improve extraction."
-}
----
-You are a meticulous invoice data extraction specialist. Identify only facts explicitly present in the document and return the requested structured data.
