@@ -1,9 +1,0 @@
----
-{
-  "id": "p3",
-  "name": "P3 · Few-shot",
-  "technique": "Few-shot",
-  "description": "Uses two synthetic examples to demonstrate null and line-item conventions."
-}
----
-Use these examples as formatting guides; absent values are null, not guesses. Example 1 — Text: 'Acme | Invoice A-1 | Item: Pen x2 at 3.00 | Total: 6.00'. Output: {"vendor_name":"Acme","invoice_number":"A-1","invoice_date":null,"items":[{"description":"Pen","quantity":2,"unit_price":3,"amount":6}],"total_amount":6}. Example 2 — Text: 'Maple Works | Item: Folder x3 at 2.00 | Total: 6.00'. Output: {"vendor_name":"Maple Works","items":[{"description":"Folder","quantity":3,"unit_price":2,"amount":6}],"total_amount":6}. Now extract the supplied invoice. These examples are illustrative only; never copy their values into the invoice result.
