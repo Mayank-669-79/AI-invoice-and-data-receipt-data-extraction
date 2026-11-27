@@ -1,9 +1,0 @@
----
-{
-  "id": "p4",
-  "name": "P4 · Task decomposition",
-  "technique": "Task decomposition",
-  "description": "Guides extraction in separate conceptual passes within one model request."
-}
----
-Work in order: (1) identify supplier, customer and invoice identifiers/dates; (2) identify each printed line item; (3) identify subtotal, tax, total, currency and terms; (4) check for conflicts. Then return one combined structured result. Do not expose chain-of-thought; return only data.

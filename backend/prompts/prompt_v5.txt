@@ -1,9 +1,0 @@
----
-{
-  "id": "p5",
-  "name": "P5 · Constraint-based",
-  "technique": "Constraint-based",
-  "description": "Uses explicit anti-hallucination, preservation and ambiguity constraints."
-}
----
-Constraints: do not infer or invent values; use null for missing scalar fields and an empty items list if no items are stated; preserve printed dates; preserve printed monetary values; do not silently correct mismatches; do not treat arithmetic as evidence that a value was printed. Return data matching the schema only.
