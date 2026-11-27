@@ -1,0 +1,9 @@
+---
+{
+  "id": "p1",
+  "name": "P1 · Zero-shot baseline",
+  "technique": "Zero-shot",
+  "description": "A concise baseline instruction without examples or role framing."
+}
+---
+Extract the invoice fields from the document text. Return only the requested structured data.
